@@ -3,7 +3,7 @@
     {
       "id": "meeting-hall",
       "name": "Meeting Hall",
-      "donation": { "name": "Gold Chalice", "themes": { "production": 2, "culture": 5 } },
+      "donation": { "name": "Gold Chalice", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "work",
@@ -34,7 +34,7 @@
     {
       "id": "library",
       "name": "Library",
-      "donation": { "name": "Ivory Statuette", "themes": { "culture": 4, "construction": 1 } },
+      "donation": { "name": "Ivory Statuette", "themes": { "culture": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "study",
@@ -61,7 +61,7 @@
     {
       "id": "university",
       "name": "University",
-      "donation": { "name": "Jeweled Ring", "themes": { "construction": 2, "culture": 3 } },
+      "donation": { "name": "Jeweled Ring", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "study",
@@ -99,7 +99,7 @@
     {
       "id": "masons-lodge",
       "name": "Mason's Lodge",
-      "donation": { "name": "Silver Goblet", "themes": { "construction": 3, "culture": 2 } },
+      "donation": { "name": "Silver Goblet", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "build",
@@ -133,7 +133,7 @@
     {
       "id": "sheep-fold",
       "name": "Sheep Fold",
-      "donation": { "name": "Gilded Coffer", "themes": { "production": 2, "construction": 2 } },
+      "donation": { "name": "Gilded Coffer", "themes": { "production": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "work",
@@ -158,7 +158,7 @@
     {
       "id": "medical-garden",
       "name": "Medical Garden",
-      "donation": { "name": "Silver Pendant", "themes": { "production": 2, "culture": 2 } },
+      "donation": { "name": "Silver Pendant", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "study",
@@ -184,7 +184,7 @@
     {
       "id": "seed-archive",
       "name": "Seed Archive",
-      "donation": { "name": "Ivory Coffer", "themes": { "production": 2, "culture": 2 } },
+      "donation": { "name": "Ivory Coffer", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "study",
@@ -210,7 +210,7 @@
     {
       "id": "infirmary",
       "name": "Infirmary",
-      "donation": { "name": "Gilded Bowl", "themes": { "construction": 2, "culture": 2 } },
+      "donation": { "name": "Gilded Bowl", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "work",
@@ -235,7 +235,7 @@
     {
       "id": "cemetery",
       "name": "Cemetery",
-      "donation": { "name": "Ivory Brooch", "themes": { "construction": 2, "culture": 1 } },
+      "donation": { "name": "Ivory Brooch", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "work",
@@ -259,7 +259,7 @@
     {
       "id": "treasury",
       "name": "Treasury",
-      "donation": { "name": "Jeweled Crown", "themes": { "culture": 3, "construction": 2 } },
+      "donation": { "name": "Jeweled Crown", "themes": { "culture": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "study",
@@ -278,7 +278,7 @@
     {
       "id": "scriptorium",
       "name": "Scriptorium",
-      "donation": { "name": "Gold Brooch", "themes": { "culture": 3, "construction": 1 } },
+      "donation": { "name": "Gold Brooch", "themes": { "culture": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "work",
@@ -301,7 +301,7 @@
     {
       "id": "brewery",
       "name": "Brewery",
-      "donation": { "name": "Copper Goblet", "themes": { "production": 3, "construction": 2 } },
+      "donation": { "name": "Copper Goblet", "themes": { "production": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "work",
@@ -324,7 +324,7 @@
     {
       "id": "mill",
       "name": "Mill",
-      "donation": { "name": "Gold Ring", "themes": { "production": 3, "culture": 1 } },
+      "donation": { "name": "Gold Ring", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "work",
@@ -352,7 +352,7 @@
     {
       "id": "barn",
       "name": "Barn",
-      "donation": { "name": "Gilded Bracelet", "themes": { "production": 3, "construction": 1 } },
+      "donation": { "name": "Gilded Bracelet", "themes": { "production": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "work",
@@ -377,7 +377,7 @@
     {
       "id": "hospice",
       "name": "Hospice",
-      "donation": { "name": "Silver Bowl", "themes": { "culture": 2, "production": 2 } },
+      "donation": { "name": "Silver Bowl", "themes": { "culture": 10, "production": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "build",
@@ -396,7 +396,7 @@
     {
       "id": "bee-yard",
       "name": "Bee Yard",
-      "donation": { "name": "Copper Bracelet", "themes": { "production": 2, "culture": 1 } },
+      "donation": { "name": "Copper Bracelet", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "build",
@@ -418,7 +418,7 @@
     {
       "id": "dovecote",
       "name": "Dovecote",
-      "donation": { "name": "Ivory Goblet", "themes": { "production": 2, "culture": 1 } },
+      "donation": { "name": "Ivory Goblet", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "work",
@@ -438,7 +438,7 @@
     {
       "id": "pottery",
       "name": "Pottery",
-      "donation": { "name": "Jeweled Goblet", "themes": { "production": 2, "construction": 1 } },
+      "donation": { "name": "Jeweled Goblet", "themes": { "production": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "build",
@@ -461,7 +461,7 @@
     {
       "id": "cloister",
       "name": "Cloister",
-      "donation": { "name": "Copper Coffer", "themes": { "culture": 2, "construction": 1 } },
+      "donation": { "name": "Copper Coffer", "themes": { "culture": 10, "construction": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "build",
@@ -484,7 +484,7 @@
     {
       "id": "wine-cellar",
       "name": "Wine Cellar",
-      "donation": { "name": "Gold Goblet", "themes": { "production": 2, "culture": 1 } },
+      "donation": { "name": "Gold Goblet", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "build",
@@ -504,7 +504,7 @@
     {
       "id": "market",
       "name": "Market",
-      "donation": { "name": "Silver Ring", "themes": { "production": 2, "culture": 1 } },
+      "donation": { "name": "Silver Ring", "themes": { "production": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "production",
       "action": "work",
@@ -523,7 +523,7 @@
     {
       "id": "domitory",
       "name": "Dormitory",
-      "donation": { "name": "Silver Crown", "themes": { "construction": 2, "culture": 1 } },
+      "donation": { "name": "Silver Crown", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "study",
@@ -543,7 +543,7 @@
     {
       "id": "plans-room",
       "name": "Plans Room",
-      "donation": { "name": "Ivory Pendant", "themes": { "construction": 2, "culture": 1 } },
+      "donation": { "name": "Ivory Pendant", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "work",
@@ -563,7 +563,7 @@
     {
       "id": "stoneworks",
       "name": "Stoneworks",
-      "donation": { "name": "Copper Statuette", "themes": { "construction": 2, "production": 1 } },
+      "donation": { "name": "Copper Statuette", "themes": { "construction": 10, "production": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "work",
@@ -588,7 +588,7 @@
     {
       "id": "craft-archive",
       "name": "Craft Archive",
-      "donation": { "name": "Silver Chalice", "themes": { "construction": 2, "culture": 2 } },
+      "donation": { "name": "Silver Chalice", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "study",
@@ -614,7 +614,7 @@
     {
       "id": "carpentry",
       "name": "Carpentry",
-      "donation": { "name": "Gilded Pendant", "themes": { "construction": 2, "culture": 1 } },
+      "donation": { "name": "Gilded Pendant", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "work",
@@ -639,7 +639,7 @@
     {
       "id": "chronicle-hall",
       "name": "Chronicle Hall",
-      "donation": { "name": "Gold Crown", "themes": { "culture": 3, "production": 1 } },
+      "donation": { "name": "Gold Crown", "themes": { "culture": 10, "production": 10 } },
       "quantity": 2,
       "theme": "culture",
       "action": "work",
@@ -664,7 +664,7 @@
     {
       "id": "works-hall",
       "name": "Works Hall",
-      "donation": { "name": "Silver Statuette", "themes": { "construction": 3, "culture": 1 } },
+      "donation": { "name": "Silver Statuette", "themes": { "construction": 10, "culture": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "build",
@@ -689,7 +689,7 @@
     {
       "id": "masons-yard",
       "name": "Mason's Yard",
-      "donation": { "name": "Copper Pendant", "themes": { "construction": 2, "production": 1 } },
+      "donation": { "name": "Copper Pendant", "themes": { "construction": 10, "production": 10 } },
       "quantity": 2,
       "theme": "construction",
       "action": "work",

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Cards.Web",
   "resources": {
-    "hash": "sha256-ZJmjLlQCles5xNZwtDoePgpYT3slnauVlaNCa/vYEPY=",
+    "hash": "sha256-SDBYnWnetixE6jgHVrs3kAZDEWKXjN5dvB6qzKnZo5I=",
     "jsModuleNative": {
       "dotnet.native.8.0.34.ob05yqu41a.js": "sha256-Uc+HxggmSGuU1CkPjbVFhBiqRQ6cUsH1lnQ1keONjkE="
     },
@@ -18,7 +18,7 @@
     },
     "assembly": {
       "Cards.Engine.wasm": "sha256-5unNfx8R1Cbgwe2be49X6Ti+qqUqaYYFjOf2NLEThbU=",
-      "Cards.Web.wasm": "sha256-abNxM/Hg294+SbNbz/kXcokKnr1jFBSRy7Y9itKmHeI=",
+      "Cards.Web.wasm": "sha256-/ldsQiTxeLAhqlkRYtQCqCzmiKm4RigI1K3B8/74Ncg=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-CrngV8E5HRpzlDUVjdQhIFqFOiiLKKThO0qz3mc8FgU=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-pPoJ7L7eXebH7A2xJm4gtM5vMCMFMnd3otp4t+S1yyA=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-YNS7ClBsT6axmu71C3qzwWeN4x7UU2nJHLZ7Gh7dUaE=",
