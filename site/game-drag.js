@@ -6,7 +6,14 @@ class FitGameBoard extends HTMLElement {
         this.listeners?.abort();
         this.listeners = new AbortController();
         const fit = () => {
-            const scale = Math.min(this.clientWidth / table.offsetWidth, this.clientHeight / table.offsetHeight);
+            const measure = layout => {
+                table.dataset.layout = layout;
+                return Math.min(this.clientWidth / table.offsetWidth, this.clientHeight / table.offsetHeight);
+            };
+            const beside = measure('beside');
+            const stacked = measure('stacked');
+            const scale = Math.max(beside, stacked);
+            if (beside >= stacked) table.dataset.layout = 'beside';
             if (scale > 0) table.style.setProperty('--board-scale', scale);
         };
         this.observer = new ResizeObserver(fit);

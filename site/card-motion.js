@@ -51,7 +51,7 @@ export function animateBoard(board, before) {
     // A flush may deal several distinct cards into the same position in one render.
     const duration = Math.max(100, Math.min(430, 1200 / Math.max(1, deals.length)));
     deals.forEach((template, i) => {
-        const slot = river[Number(template.dataset.slot)];
+        const slot = river[Number(template.dataset.slot)].lastElementChild;
         const to = slot.getBoundingClientRect();
         const flight = document.createElement('div');
         flight.className = 'deal-flight';
