@@ -18,8 +18,10 @@ fit-game-board { display:block; position:relative; height:100dvh; overflow:clip;
 .instruction { min-height: 30px; }
 .play-layout { display: grid; grid-template-columns: max-content max-content; align-items: start; gap: 12px; }
 .game-table[data-layout="stacked"] .play-layout { grid-template-columns: max-content; }
-.supply { display: grid; grid-template-columns: repeat(2, var(--w)); gap: var(--gap); }
-.game-table[data-layout="stacked"] .supply { grid-template-columns: repeat(3, var(--w)); }
+.supply { display: grid; grid-template-columns: repeat(2, var(--w)); grid-template-areas: ". draw" ". discard" ". ."; gap: var(--gap); }
+.game-table[data-layout="stacked"] .supply { grid-template-columns: repeat(3, var(--w)); grid-template-areas: ". . ." ". draw discard"; }
+.supply-slot[aria-labelledby="deck-title"] { grid-area: draw; }
+.supply-slot[aria-labelledby="discard-title"] { grid-area: discard; }
 .river-grid { display: contents; }
 .supply-slot { display: grid; grid-template-rows: 18px auto; }
 .supply-slot > :not(h2) { grid-row: 2; }
