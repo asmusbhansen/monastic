@@ -1,0 +1,47 @@
+body:has(.game-table) { background: #fafaf8; }
+fit-game-board { display:block; position:relative; height:100dvh; overflow:clip; }
+.game-table {
+    --w: 180px;
+    --gap: 6px;
+    position:absolute; left:50%; width:calc(5 * var(--w) + 3 * var(--gap) + 64px); padding:8px 12px;
+    transform-origin:top center; transform:translateX(-50%) scale(var(--board-scale, 1));
+    color: #28332e; font: 14px/1.35 system-ui,sans-serif;
+}
+.game-header, .counters, .instruction, .game-table > footer {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px 16px;
+}
+.game-header { border-bottom: 1px solid #c9cec8; padding-bottom: 5px; }
+.game-header h1 { font: 600 17px system-ui,sans-serif; margin: 0 auto 0 0; }
+.counters span { white-space: nowrap; }
+.counters .yield-count { display:inline-flex; align-items:center; margin-inline-start:.4em; }
+.instruction { min-height: 30px; }
+.play-layout { display: grid; grid-template-columns: max-content max-content; align-items: start; gap: 12px; }
+.supply { display: grid; gap: 10px; }
+.board-panel { min-width: 0; padding: 6px; border: 1px solid #aeb6ac; border-radius: 4px; }
+.board-panel > h2 {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+    margin: 0 0 6px; color: #354d41; font: 700 .8rem system-ui,sans-serif; text-transform: uppercase;
+}
+.board-panel > h2 small { text-transform: none; }
+.game-table h2 small { font-weight: normal; color: #566158; }
+.tableau-grid, .river-grid { display: grid; gap: var(--gap); }
+.tableau-grid { grid-template-columns: repeat(3,var(--w)); }
+.river-grid { grid-template-columns: repeat(2,var(--w)); }
+.play-card { position: relative; width: var(--w); font-family: Georgia,serif; line-height: normal; }
+.play-card .card { --card-width: var(--w); }
+.tuck-count { position:absolute; right:0; bottom:0; background:white; padding:0 3px; }
+.vacancy, .choice-handle { border: 1px dashed #aeb6ac; border-radius: 4px; padding: 4px; }
+.vacancy { aspect-ratio: 5 / 7; }
+.deck-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--gap); }
+.deck-row > .board-panel { container-type:inline-size; }
+.draw-pile, .discard-pile { --w:100cqw; width:var(--w); aspect-ratio:5/7; font: normal 1em/normal Georgia,serif; }
+.draw-pile .card { --card-width:var(--w); box-shadow:1px 2px #aaa,2px 4px #ccc; }
+.deal-flight { position:fixed; pointer-events:none; z-index:21; transform-origin:top left; font:normal 1em/normal Georgia,serif; }
+.deal-flight .card { --card-width:var(--w); position:absolute; inset:0; backface-visibility:hidden; }
+.game-table > footer { justify-content: space-between; color: #657067; margin-top: 8px; font-size: 12px; }
+.game-table [data-drops]:not([data-drops=""]) { cursor: grab; touch-action: none; user-select: none; }
+.game-table .drop-target { outline: 3px solid #367258; outline-offset: 1px; }
+.game-table .drag-source { opacity: .15; }
+.play-card, .floating-card { transform-origin: top left; }
+.floating-card { position: fixed; z-index: 20; pointer-events: none; margin: 0; }
+.held-card { filter: drop-shadow(2px 6px 5px #14271f50); }

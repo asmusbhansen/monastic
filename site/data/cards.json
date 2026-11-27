@@ -1,0 +1,719 @@
+{
+  "cards": [
+    {
+      "id": "meeting-hall",
+      "name": "Meeting Hall",
+      "donation": { "name": "Gold Chalice", "themes": { "production": 2, "culture": 5 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "work",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 2,
+        "abilities": [
+          {
+            "trigger": { "event": "game_end" },
+            "effects": [
+              {
+                "kind": "gain_vp",
+                "amount": 1,
+                "per": {
+                  "zone": "tableau",
+                  "state": "construction",
+                  "theme": "culture",
+                  "scope": "same_row",
+                  "exclude_self": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "donation": { "name": "Ivory Statuette", "themes": { "culture": 4, "construction": 1 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "study",
+      "ressources": { "wood": 2 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 3 },
+        "vp": 2,
+        "abilities": [
+          {
+            "trigger": { "event": "study_action" },
+            "optional": true,
+            "effects": [
+              {
+                "kind": "take_action",
+                "action": "work",
+                "amount": 1,
+                "target": { "zone": "tableau", "state": "worker", "ressource": "wood" }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "university",
+      "name": "University",
+      "donation": { "name": "Jeweled Ring", "themes": { "construction": 2, "culture": 3 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "study",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 3 },
+        "vp": 4,
+        "abilities": [
+          {
+            "trigger": { "event": "self_build" },
+            "optional": true,
+            "effects": [
+              {
+                "kind": "take_action",
+                "action": "work",
+                "amount": 1,
+                "target": { "zone": "tableau", "state": "worker" }
+              }
+            ]
+          },
+          {
+            "trigger": { "event": "study_action" },
+            "optional": true,
+            "effects": [
+              {
+                "kind": "move",
+                "target": { "zone": "discard", "from_trigger": true, "role": "other" },
+                "to": "tucked"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "masons-lodge",
+      "name": "Mason's Lodge",
+      "donation": { "name": "Silver Goblet", "themes": { "construction": 3, "culture": 2 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "build",
+      "ressources": { "stone": 2 },
+      "construction": {
+        "cost": { "stone": 2, "wood": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "build",
+              "target": {
+                "zone": "tableau",
+                "state": "construction",
+                "scope": "adjacent"
+              }
+            },
+            "optional": true,
+            "effects": [
+              {
+                "kind": "take_action",
+                "action": "work",
+                "amount": 1,
+                "target": { "zone": "tableau", "state": "worker", "ressource": "wood" }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sheep-fold",
+      "name": "Sheep Fold",
+      "donation": { "name": "Gilded Coffer", "themes": { "production": 2, "construction": 2 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "work",
+      "ressources": { "stone": 2 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "discount",
+                "target": { "zone": "tableau", "state": "worker" },
+                "ressources": { "stone": 1 }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "medical-garden",
+      "name": "Medical Garden",
+      "donation": { "name": "Silver Pendant", "themes": { "production": 2, "culture": 2 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "study",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "count_as_theme",
+                "target": { "zone": "tableau", "state": "construction", "theme": "production" },
+                "required": "culture",
+                "during": "study_action"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "seed-archive",
+      "name": "Seed Archive",
+      "donation": { "name": "Ivory Coffer", "themes": { "production": 2, "culture": 2 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "study",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "count_as_theme",
+                "target": { "zone": "tableau", "state": "construction", "theme": "culture" },
+                "required": "production",
+                "during": "study_action"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "infirmary",
+      "name": "Infirmary",
+      "donation": { "name": "Gilded Bowl", "themes": { "construction": 2, "culture": 2 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "work",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "tuck",
+                "target": { "zone": "tableau", "state": "worker" },
+                "during": "build_action"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cemetery",
+      "name": "Cemetery",
+      "donation": { "name": "Ivory Brooch", "themes": { "construction": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "work",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "build",
+              "target": { "zone": "tableau", "state": "construction", "scope": "adjacent" }
+            },
+            "effects": [
+              { "kind": "move", "target": { "zone": "discard", "top": true }, "to": "tucked" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "treasury",
+      "name": "Treasury",
+      "donation": { "name": "Jeweled Crown", "themes": { "culture": 3, "construction": 2 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "study",
+      "ressources": { "stone": 2 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 3 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "game_end" },
+            "effects": [{ "kind": "gain_vp", "amount": 1, "per": { "zone": "donations" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "scriptorium",
+      "name": "Scriptorium",
+      "donation": { "name": "Gold Brooch", "themes": { "culture": 3, "construction": 1 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "work",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "build",
+              "target": { "zone": "tableau", "state": "construction", "theme": "culture", "scope": "adjacent" }
+            },
+            "optional": true,
+            "effects": [{ "kind": "move", "target": { "zone": "river" }, "to": "donations" }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "brewery",
+      "name": "Brewery",
+      "donation": { "name": "Copper Goblet", "themes": { "production": 3, "construction": 2 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "work",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "self_build" },
+            "optional": true,
+            "effects": [
+              { "kind": "take_action", "action": "work", "target": { "zone": "tableau", "state": "worker" } },
+              { "kind": "take_action", "action": "build" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mill",
+      "name": "Mill",
+      "donation": { "name": "Gold Ring", "themes": { "production": 3, "culture": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "work",
+      "ressources": { "stone": 2 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "build",
+              "target": { "zone": "tableau", "state": "construction", "theme": "production", "scope": "adjacent" }
+            },
+            "effects": [
+              {
+                "kind": "move",
+                "target": { "zone": "river", "ressource": "wood" },
+                "to": "ressources"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "barn",
+      "name": "Barn",
+      "donation": { "name": "Gilded Bracelet", "themes": { "production": 3, "construction": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "work",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 3, "stone": 1 },
+        "vp": 0,
+        "abilities": [
+          {
+            "trigger": { "event": "game_end" },
+            "effects": [
+              {
+                "kind": "gain_vp",
+                "amount": 1,
+                "per": { "zone": "tableau", "state": "construction", "theme": "production" }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "hospice",
+      "name": "Hospice",
+      "donation": { "name": "Silver Bowl", "themes": { "culture": 2, "production": 2 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "build",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "self_build" },
+            "effects": [{ "kind": "move", "target": { "zone": "river" }, "to": "ressources", "until": { "wood": 1, "stone": 1 } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "bee-yard",
+      "name": "Bee Yard",
+      "donation": { "name": "Copper Bracelet", "themes": { "production": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "build",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "build",
+              "target": { "zone": "tableau", "state": "construction", "theme": "production" }
+            },
+            "effects": [{ "kind": "build", "target": { "zone": "tableau", "state": "worker" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dovecote",
+      "name": "Dovecote",
+      "donation": { "name": "Ivory Goblet", "themes": { "production": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "work",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "self_build" },
+            "cost": [{ "kind": "move", "target": { "zone": "ressources" }, "to": "discard" }],
+            "effects": [{ "kind": "move", "amount": 2, "target": { "zone": "river" }, "to": "ressources" }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pottery",
+      "name": "Pottery",
+      "donation": { "name": "Jeweled Goblet", "themes": { "production": 2, "construction": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "build",
+      "ressources": { "wood": 2 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "switch_action",
+              "target": { "zone": "tableau", "state": "worker", "scope": "adjacent" }
+            },
+            "optional": true,
+            "effects": [{ "kind": "move", "target": { "zone": "river" }, "to": "ressources" }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cloister",
+      "name": "Cloister",
+      "donation": { "name": "Copper Coffer", "themes": { "culture": 2, "construction": 1 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "build",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "game_end" },
+            "conditions": [
+              { "at_least": 1, "target": { "zone": "tableau", "state": "construction", "theme": "production", "scope": "adjacent" } },
+              { "at_least": 1, "target": { "zone": "tableau", "state": "construction", "theme": "construction", "scope": "adjacent" } }
+            ],
+            "effects": [{ "kind": "gain_vp", "amount": 3 }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "wine-cellar",
+      "name": "Wine Cellar",
+      "donation": { "name": "Gold Goblet", "themes": { "production": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "build",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "donation", "during": "study_action" },
+            "optional": true,
+            "effects": [{ "kind": "take_action", "action": "work", "target": { "zone": "tableau", "state": "worker" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "market",
+      "name": "Market",
+      "donation": { "name": "Silver Ring", "themes": { "production": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "production",
+      "action": "work",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 1 },
+        "vp": 1,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [{ "kind": "switch_from", "target": { "zone": "ressources" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "domitory",
+      "name": "Dormitory",
+      "donation": { "name": "Silver Crown", "themes": { "construction": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "study",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 1 },
+        "vp": 0,
+        "abilities": [
+          {
+            "trigger": { "event": "self_build" },
+            "optional": true,
+            "effects": [{ "kind": "swap", "target": { "zone": "tableau", "state": "construction" } }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "plans-room",
+      "name": "Plans Room",
+      "donation": { "name": "Ivory Pendant", "themes": { "construction": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "work",
+      "ressources": { "stone": 2 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": { "event": "build_action" },
+            "optional": true,
+            "effects": [{ "kind": "take_action", "action": "study" }]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoneworks",
+      "name": "Stoneworks",
+      "donation": { "name": "Copper Statuette", "themes": { "construction": 2, "production": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "work",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "stone": 1 },
+        "vp": 0,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "discount",
+                "target": { "zone": "tableau", "state": "worker", "scope": "adjacent" },
+                "ressources": { "stone": 1 }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "craft-archive",
+      "name": "Craft Archive",
+      "donation": { "name": "Silver Chalice", "themes": { "construction": 2, "culture": 2 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "study",
+      "ressources": { "wood": 2 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "count_as_theme",
+                "target": { "zone": "tableau", "state": "construction", "theme": "construction" },
+                "required": "culture",
+                "during": "study_action"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "carpentry",
+      "name": "Carpentry",
+      "donation": { "name": "Gilded Pendant", "themes": { "construction": 2, "culture": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "work",
+      "ressources": { "wood": 1 },
+      "construction": {
+        "cost": { "wood": 1 },
+        "vp": 0,
+        "abilities": [
+          {
+            "persistent": true,
+            "effects": [
+              {
+                "kind": "discount",
+                "target": { "zone": "tableau", "state": "worker", "scope": "adjacent" },
+                "ressources": { "wood": 1 }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "chronicle-hall",
+      "name": "Chronicle Hall",
+      "donation": { "name": "Gold Crown", "themes": { "culture": 3, "production": 1 } },
+      "quantity": 2,
+      "theme": "culture",
+      "action": "work",
+      "ressources": { "wood": 2 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 3 },
+        "vp": 0,
+        "abilities": [
+          {
+            "trigger": { "event": "game_end" },
+            "effects": [
+              {
+                "kind": "gain_vp",
+                "amount": 1,
+                "per": { "zone": "tableau", "state": "construction", "theme": "culture" }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "works-hall",
+      "name": "Works Hall",
+      "donation": { "name": "Silver Statuette", "themes": { "construction": 3, "culture": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "build",
+      "ressources": { "wood": 2 },
+      "construction": {
+        "cost": { "wood": 2, "stone": 2 },
+        "vp": 0,
+        "abilities": [
+          {
+            "trigger": { "event": "game_end" },
+            "effects": [
+              {
+                "kind": "gain_vp",
+                "amount": 1,
+                "per": { "zone": "tableau", "state": "construction", "theme": "construction" }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "masons-yard",
+      "name": "Mason's Yard",
+      "donation": { "name": "Copper Pendant", "themes": { "construction": 2, "production": 1 } },
+      "quantity": 2,
+      "theme": "construction",
+      "action": "work",
+      "ressources": { "stone": 1 },
+      "construction": {
+        "cost": { "wood": 1, "stone": 2 },
+        "vp": 1,
+        "abilities": [
+          {
+            "trigger": {
+              "event": "build",
+              "target": { "zone": "tableau", "state": "construction", "theme": "construction", "scope": "adjacent" }
+            },
+            "optional": true,
+            "effects": [
+              {
+                "kind": "move",
+                "target": { "zone": "river", "ressource": "stone" },
+                "to": "ressources"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
